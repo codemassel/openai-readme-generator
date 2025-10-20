@@ -1,6 +1,4 @@
-# AI-powered README Generator ![Python](https://img.shields.io/badge/python-3.11-blue)
-![OpenAI](https://img.shields.io/badge/OpenAI-API-red)
-![Docker](https://img.shields.io/badge/docker-ready-lightgrey)
+# AI-powered README Generator ![Python](https://img.shields.io/badge/python-3.11-blue) ![OpenAI](https://img.shields.io/badge/OpenAI-API-red) ![Docker](https://img.shields.io/badge/docker-ready-lightgrey)
 Generiert automatisch komplette READMEs für GitHub-Repositories mit OpenAI / GPT-3.5 API.
 
 Unterstützt sowohl **DummyAI** (kostenlos) als auch **OpenAI API**.
