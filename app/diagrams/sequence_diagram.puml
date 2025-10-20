@@ -1,0 +1,21 @@
+@startuml sequence_diagram
+actor User
+participant "main.py" as Main
+participant "GitHubClient" as GitHub
+participant "AIReadmeGenerator" as AI
+participant "OpenAI API" as OpenAI
+participant "ReadmeBuilder" as Builder
+
+User -> Main : Eingabe Owner + Repo
+Main -> GitHub : get_repo_info(owner, repo_name)
+GitHub --> Main : repo_info
+Main -> AI : generate_readme_section(repo_info, "Description")
+AI -> OpenAI : ChatCompletion Request
+OpenAI --> AI : Response Text
+AI --> Main : Text
+Main -> Builder : build_readme(repo_info)
+Builder -> AI : generate_readme_section(...)
+Builder --> Main : README Text
+Main -> User : "README generiert!"
+Main -> GENERATED_README.md : Speichern
+@enduml

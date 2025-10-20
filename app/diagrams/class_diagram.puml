@@ -1,0 +1,22 @@
+@startuml class_diagram
+class GitHubClient {
+    - client: Github
+    + get_repo_info(owner: str, repo_name: str) : dict
+    + logger: logging.Logger
+}
+
+class AIReadmeGenerator {
+    - client: OpenAI
+    + generate_readme_section(repo_info: dict, section: str) : str
+    + logger: logging.Logger
+}
+
+class ReadmeBuilder {
+    - generator: AIReadmeGenerator
+    + build_readme(repo_info: dict) : str
+    + logger: logging.Logger
+}
+
+GitHubClient --> ReadmeBuilder
+AIReadmeGenerator --> ReadmeBuilder
+@enduml

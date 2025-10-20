@@ -1,0 +1,13 @@
+@startuml flowchart
+start
+:User gibt Owner + Repo ein;
+:GitHubClient ruft Repo-Infos ab;
+repeat
+    :Für jede Sektion ("Description", "Installation", ...);
+    :AIReadmeGenerator sendet Prompt an OpenAI API;
+    :Antwort empfangen und speichern;
+repeat while (noch Sektionen?)
+:ReadmeBuilder fügt Sektionen zusammen;
+:README als GENERATED_README.md speichern;
+stop
+@enduml
