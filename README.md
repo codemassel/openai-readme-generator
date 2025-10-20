@@ -1,6 +1,6 @@
-# README Generator
+# AI-powered README Generator 🤖
+Generiert automatisch komplette READMEs für GitHub-Repositories mit OpenAI / GPT-3.5 API.
 
-Automatischer README-Generator für GitHub-Repositories.
 Unterstützt sowohl **DummyAI** (kostenlos) als auch **OpenAI API**.
 Mit **lokalem Cache**, **Docker-Setup** und **FastAPI Webservice**.
 
