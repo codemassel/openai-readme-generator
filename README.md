@@ -21,8 +21,8 @@ Mit **lokalem Cache**, **Docker-Setup** und **FastAPI Webservice**.
 1. Repository klonen:
 
 ```bash
-git clone https://github.com/Codemassel/readme-generator.git
-cd readme-generator
+git clone https://github.com/Codemassel/openai-readme-generator.git
+cd openai-readme-generator
 ```
 
 2. Virtuelle Umgebung erstellen (optional, lokal):
@@ -124,7 +124,7 @@ CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 * Volumes für Hot-Reload:
 
 ```bash
-docker run -p 8000:8000 -v ${PWD}/app:/app readme-generator
+docker run -p 8000:8000 -v ${PWD}/app:/app openai-readme-generator
 ```
 
 ---
@@ -132,7 +132,7 @@ docker run -p 8000:8000 -v ${PWD}/app:/app readme-generator
 ## Projektstruktur
 
 ```
-readme-generator/
+openai-readme-generator/
 ├── app/
 │   ├── main.py
 │   ├── api.py
